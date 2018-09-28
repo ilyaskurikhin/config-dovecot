@@ -1,0 +1,8 @@
+driver = pgsql
+
+connect = host=localhost dbname=mail user=mailreader password=hi7XdGq5RGYACoMbsyDyDpp3p
+
+default_pass_scheme = SHA512
+
+password_query = SELECT email AS user, password, 'maildir:/var/spool/mail/virtual/'||maildir AS userdb_mail FROM users WHERE email='%u'
+ 
